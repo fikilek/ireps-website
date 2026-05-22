@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import SectionHeader from "../components/SectionHeader";
 import FeatureCard from "../components/FeatureCard";
+import NetworkModelSection from "../components/NetworkModelSection";
 import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer";
 
@@ -62,57 +63,25 @@ function Home() {
         </div>
       </section>
 
-      <section id="water" className="section waterSection">
-        <SectionHeader
-          eyebrow="Water & sanitation model"
-          title="Follow the water network from source to consumer revenue."
-        >
-          iREPS can support infrastructure data collection across the water and
-          sanitation value chain, from source and treatment to storage,
-          distribution, consumer readings, billing-readiness, revenue, and
-          credit control.
-        </SectionHeader>
+      <NetworkModelSection
+        id="water"
+        className="waterSection"
+        eyebrow="Water & sanitation model"
+        title="Follow the water network from source to consumer revenue."
+        description="iREPS can support infrastructure data collection across the water and sanitation value chain, from source and treatment to storage, distribution, consumer readings, billing-readiness, revenue, and credit control."
+        steps={waterNetworkSteps}
+        valueCards={waterValueCards}
+      />
 
-        <div className="networkFlow">
-          {waterNetworkSteps.map((step) => (
-            <span key={step}>{step}</span>
-          ))}
-        </div>
-
-        <div className="modelValueGrid">
-          {waterValueCards.map((item) => (
-            <div className="modelValueCard" key={item}>
-              {item}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="energy" className="section energySection">
-        <SectionHeader
-          eyebrow="Energy revenue model"
-          title="Connect electricity infrastructure to meter readings, billing, and revenue protection."
-        >
-          iREPS supports electricity field operations by linking infrastructure
-          visibility, meter lifecycle transactions, conventional meter readings,
-          workorders, billing-readiness, revenue monitoring, and credit control
-          support.
-        </SectionHeader>
-
-        <div className="networkFlow energyFlow">
-          {energyNetworkSteps.map((step) => (
-            <span key={step}>{step}</span>
-          ))}
-        </div>
-
-        <div className="modelValueGrid">
-          {energyValueCards.map((item) => (
-            <div className="modelValueCard" key={item}>
-              {item}
-            </div>
-          ))}
-        </div>
-      </section>
+      <NetworkModelSection
+        id="energy"
+        className="energySection"
+        eyebrow="Energy meter lifecycle model"
+        title="Connect electricity meter lifecycle work to billing, revenue, and credit control."
+        description="iREPS supports electricity operations by linking service connections, meter discovery, meter installation, meter reading, decommissioning, disconnection, reconnection, billing-readiness, revenue monitoring, and credit control support."
+        steps={energyNetworkSteps}
+        valueCards={energyValueCards}
+      />
 
       <section className="section valueSection">
         <SectionHeader
