@@ -3,14 +3,16 @@ import { navLinks } from "../data/websiteContent";
 function Navbar() {
   return (
     <nav className="navbar">
-      <div className="brand">
-        <div className="brandMark">i</div>
+      <a className="brand" href="#top" aria-label="iREPS home">
+        <div className="brandMark">
+          <span>i</span>
+        </div>
 
-        <div>
+        <div className="brandText">
           <strong>iREPS</strong>
           <span>Infrastructure Revenue & Energy Platform</span>
         </div>
-      </div>
+      </a>
 
       <div className="navLinks">
         {navLinks.map((link) => (

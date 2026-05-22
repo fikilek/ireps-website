@@ -495,3 +495,1208 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+.brand {
+  color: inherit;
+}
+
+.brand:hover .brandMark {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 34px rgba(15, 61, 94, 0.22);
+}
+
+.brandMark {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.brandMark::after {
+  content: "";
+  position: absolute;
+  inset: 8px 10px auto auto;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: #2dd4bf;
+}
+
+.brandMark span {
+  position: relative;
+  z-index: 1;
+}
+
+.brandText strong {
+  font-size: 18px;
+  letter-spacing: -0.03em;
+}
+
+.brandText span {
+  max-width: 260px;
+}
+
+.heroContent {
+  position: relative;
+}
+
+.heroContent::before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  top: -22px;
+  width: 72px;
+  height: 72px;
+  border-radius: 24px;
+  background: rgba(15, 118, 110, 0.12);
+  z-index: -1;
+}
+
+.cta {
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 30px;
+}
+
+.ctaContent {
+  max-width: 760px;
+}
+
+.ctaActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: flex-start;
+}
+
+.secondaryButton.light {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.ctaPanel {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 26px;
+  padding: 26px;
+}
+
+.ctaPanel strong {
+  display: block;
+  margin-bottom: 14px;
+  color: white;
+  font-size: 20px;
+}
+
+.ctaPanel ul {
+  margin: 0;
+  padding-left: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.9;
+}
+
+@media (max-width: 900px) {
+  .cta {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboardShowcase {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(15, 118, 110, 0.12),
+      transparent 32%
+    ),
+    #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 34px;
+  padding: 46px;
+  box-shadow: 0 18px 48px rgba(15, 61, 94, 0.08);
+}
+
+.dashboardIntro {
+  margin-bottom: 26px;
+}
+
+.dashboardShowcaseGrid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 18px;
+}
+
+.dashboardMetrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.dashboardMetricCard,
+.chartCard {
+  background: #f8fbfd;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 20px;
+}
+
+.dashboardMetricCard p,
+.chartLabel {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.dashboardMetricCard strong {
+  display: block;
+  color: var(--primary);
+  font-size: 30px;
+  letter-spacing: -0.04em;
+}
+
+.dashboardMetricCard span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.chartCard {
+  background: white;
+}
+
+.chartHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.chartHeader strong {
+  display: block;
+  color: var(--primary-dark);
+  font-size: 20px;
+}
+
+.chartHeader > span {
+  background: var(--soft);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 7px 11px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.barChartCard {
+  min-height: 270px;
+}
+
+.barChart {
+  height: 190px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  align-items: end;
+}
+
+.barItem {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 10px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.barTrack {
+  height: 100%;
+  border-radius: 999px;
+  background: #e8eef5;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.barFill {
+  width: 100%;
+  min-height: 18px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #0f766e, #0f3d5e);
+}
+
+.pieChartCard {
+  min-height: 270px;
+}
+
+.pieWrap {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.pieChart {
+  width: 154px;
+  height: 154px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #0f766e 0deg 242deg,
+    #f59e0b 242deg 310deg,
+    #0f3d5e 310deg 360deg
+  );
+  box-shadow: inset 0 0 0 24px #ffffff;
+  border: 1px solid var(--border);
+}
+
+.pieLegend {
+  display: grid;
+  gap: 12px;
+  color: var(--primary-dark);
+  font-weight: 800;
+}
+
+.pieLegend span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.pieLegend i {
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+}
+
+.legendSuccess {
+  background: #0f766e;
+}
+
+.legendWarning {
+  background: #f59e0b;
+}
+
+.legendInfo {
+  background: #0f3d5e;
+}
+
+.dashboardTableCard {
+  grid-column: 1 / -1;
+}
+
+.reportTableWrap {
+  overflow-x: auto;
+}
+
+.reportTable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 660px;
+}
+
+.reportTable th,
+.reportTable td {
+  padding: 14px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.reportTable th {
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.reportTable td {
+  color: var(--primary-dark);
+  font-weight: 800;
+}
+
+.statusPill {
+  display: inline-flex;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--accent);
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+@media (max-width: 900px) {
+  .dashboardShowcaseGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .pieWrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 620px) {
+  .dashboardShowcase {
+    padding: 30px;
+    border-radius: 26px;
+  }
+
+  .dashboardMetrics {
+    grid-template-columns: 1fr;
+  }
+
+  .barChart {
+    gap: 8px;
+  }
+}
+
+.gisShowcase {
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(15, 61, 94, 0.12),
+      transparent 32%
+    ),
+    #eef6fb;
+  border-radius: 34px;
+  padding: 46px;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.gisContent .sectionIntro {
+  margin-bottom: 24px;
+}
+
+.gisFeatureGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.gisFeatureCard {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 20px;
+  box-shadow: 0 14px 32px rgba(15, 61, 94, 0.06);
+}
+
+.gisFeatureCard h3 {
+  margin: 0 0 10px;
+  color: var(--primary-dark);
+  font-size: 18px;
+}
+
+.gisFeatureCard p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.gisMapPanel {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.mapToolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.mapToolbar strong {
+  color: var(--primary-dark);
+  font-size: 18px;
+}
+
+.mapToolbar span {
+  background: var(--soft);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.mockMap {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(90deg, rgba(15, 61, 94, 0.06) 1px, transparent 1px),
+    linear-gradient(rgba(15, 61, 94, 0.06) 1px, transparent 1px),
+    linear-gradient(145deg, #dff1ed, #f8fbfd);
+  background-size:
+    32px 32px,
+    32px 32px,
+    auto;
+}
+
+.wardShape {
+  position: absolute;
+  border: 2px solid rgba(15, 61, 94, 0.38);
+  background: rgba(255, 255, 255, 0.42);
+  border-radius: 34% 48% 42% 36%;
+}
+
+.wardShapeOne {
+  width: 260px;
+  height: 210px;
+  left: 46px;
+  top: 56px;
+  transform: rotate(-9deg);
+}
+
+.wardShapeTwo {
+  width: 230px;
+  height: 190px;
+  right: 34px;
+  bottom: 44px;
+  transform: rotate(12deg);
+}
+
+.geofenceShape {
+  position: absolute;
+  width: 170px;
+  height: 130px;
+  right: 92px;
+  top: 74px;
+  border: 3px dashed rgba(15, 118, 110, 0.75);
+  background: rgba(15, 118, 110, 0.08);
+  border-radius: 45% 35% 48% 40%;
+  transform: rotate(-14deg);
+}
+
+.mapPin {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+  border: 3px solid white;
+  box-shadow: 0 12px 24px rgba(15, 61, 94, 0.2);
+  z-index: 3;
+}
+
+.meterPin {
+  background: var(--primary);
+}
+
+.premisePin {
+  background: var(--accent);
+}
+
+.erfPin {
+  background: #2563eb;
+}
+
+.warningPin {
+  background: #f59e0b;
+}
+
+.pinOne {
+  left: 116px;
+  top: 118px;
+}
+
+.pinTwo {
+  right: 126px;
+  bottom: 122px;
+}
+
+.pinThree {
+  left: 210px;
+  bottom: 92px;
+}
+
+.pinFour {
+  right: 190px;
+  top: 156px;
+}
+
+.pinFive {
+  right: 74px;
+  top: 116px;
+}
+
+.mapLegend {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 12px;
+  backdrop-filter: blur(8px);
+}
+
+.mapLegend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--primary-dark);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.mapLegend i {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+}
+
+.legendMeter {
+  background: var(--primary);
+}
+
+.legendPremise {
+  background: var(--accent);
+}
+
+.legendGeofence {
+  background: transparent;
+  border: 2px dashed var(--accent);
+}
+
+.gisLayerPanel {
+  margin-top: 14px;
+  background: #f8fbfd;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 18px;
+}
+
+.gisLayerPanel p {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.gisLayerPanel strong {
+  color: var(--primary-dark);
+}
+
+.layerChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.layerChips span {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 11px;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+@media (max-width: 900px) {
+  .gisShowcase {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .gisShowcase {
+    padding: 30px;
+    border-radius: 26px;
+  }
+
+  .gisFeatureGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .mockMap {
+    min-height: 300px;
+  }
+
+  .mapToolbar,
+  .mapLegend {
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 18px;
+  }
+}
+
+.teamsShowcase {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(15, 118, 110, 0.14),
+      transparent 34%
+    ),
+    #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 34px;
+  padding: 46px;
+  box-shadow: 0 18px 48px rgba(15, 61, 94, 0.08);
+}
+
+.teamsHeader .sectionIntro {
+  margin-bottom: 28px;
+}
+
+.teamsLayout {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.teamFeatureGrid,
+.geofenceFeatureGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.teamFeatureCard,
+.geofenceFeatureCard {
+  background: #f8fbfd;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 20px;
+}
+
+.teamFeatureCard h3,
+.geofenceFeatureCard h3 {
+  margin: 0 0 10px;
+  color: var(--primary-dark);
+  font-size: 18px;
+}
+
+.teamFeatureCard p,
+.geofenceFeatureCard p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.teamPanel {
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(15, 61, 94, 0.14),
+      transparent 34%
+    ),
+    var(--primary-dark);
+  color: white;
+  border-radius: 30px;
+  padding: 24px;
+  min-height: 100%;
+  box-shadow: var(--shadow);
+}
+
+.teamPanelHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.teamPanelHeader p {
+  margin: 0 0 6px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.teamPanelHeader strong {
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+.teamPanelHeader > span {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  padding: 8px 11px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.teamFlow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.teamFlow span {
+  background: white;
+  color: var(--primary-dark);
+  border-radius: 999px;
+  padding: 10px 13px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.teamCardStack {
+  display: grid;
+  gap: 12px;
+}
+
+.teamMiniCard {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.teamMiniCard strong,
+.teamMiniCard span {
+  display: block;
+}
+
+.teamMiniCard strong {
+  color: white;
+  margin-bottom: 5px;
+}
+
+.teamMiniCard span,
+.teamMiniCard p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+}
+
+.teamMiniCard p {
+  margin: 0;
+  font-weight: 900;
+}
+
+.geofenceShowcase {
+  background:
+    radial-gradient(
+      circle at bottom left,
+      rgba(15, 118, 110, 0.12),
+      transparent 32%
+    ),
+    #eef6fb;
+  border-radius: 34px;
+  padding: 46px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.geofenceMapCard {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.geofenceToolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.geofenceToolbar strong {
+  color: var(--primary-dark);
+  font-size: 18px;
+}
+
+.geofenceToolbar span {
+  background: var(--soft);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.geofenceMockMap {
+  position: relative;
+  min-height: 340px;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(90deg, rgba(15, 61, 94, 0.06) 1px, transparent 1px),
+    linear-gradient(rgba(15, 61, 94, 0.06) 1px, transparent 1px),
+    linear-gradient(145deg, #f8fbfd, #dff1ed);
+  background-size:
+    30px 30px,
+    30px 30px,
+    auto;
+}
+
+.geofenceBoundary {
+  position: absolute;
+  width: 260px;
+  height: 210px;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%) rotate(-8deg);
+  border: 4px dashed rgba(15, 118, 110, 0.86);
+  background: rgba(15, 118, 110, 0.1);
+  border-radius: 44% 36% 52% 38%;
+}
+
+.geofenceWardLine {
+  position: absolute;
+  height: 2px;
+  width: 520px;
+  background: rgba(15, 61, 94, 0.16);
+}
+
+.lineOne {
+  left: -90px;
+  top: 120px;
+  transform: rotate(19deg);
+}
+
+.lineTwo {
+  right: -120px;
+  bottom: 92px;
+  transform: rotate(-24deg);
+}
+
+.geoDot {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--primary);
+  border: 3px solid white;
+  box-shadow: 0 10px 20px rgba(15, 61, 94, 0.18);
+  z-index: 2;
+}
+
+.geoDot.warning {
+  background: #f59e0b;
+}
+
+.dotOne {
+  left: 38%;
+  top: 34%;
+}
+
+.dotTwo {
+  left: 55%;
+  top: 38%;
+}
+
+.dotThree {
+  left: 48%;
+  top: 58%;
+}
+
+.dotFour {
+  left: 62%;
+  top: 56%;
+}
+
+.dotFive {
+  left: 36%;
+  top: 66%;
+}
+
+.dotSix {
+  left: 68%;
+  top: 44%;
+}
+
+.geofenceLabel {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  max-width: calc(100% - 36px);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 14px;
+  backdrop-filter: blur(8px);
+}
+
+.geofenceLabel strong,
+.geofenceLabel span {
+  display: block;
+}
+
+.geofenceLabel strong {
+  color: var(--primary-dark);
+  margin-bottom: 5px;
+}
+
+.geofenceLabel span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.geofenceMetricGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.geofenceMetric {
+  background: #f8fbfd;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 14px;
+}
+
+.geofenceMetric p {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.geofenceMetric strong {
+  color: var(--primary);
+  font-size: 22px;
+}
+
+.geofenceContent .sectionIntro {
+  margin-bottom: 22px;
+}
+
+@media (max-width: 1000px) {
+  .teamsLayout,
+  .geofenceShowcase {
+    grid-template-columns: 1fr;
+  }
+
+  .geofenceVisual {
+    order: 2;
+  }
+
+  .geofenceContent {
+    order: 1;
+  }
+}
+
+@media (max-width: 760px) {
+  .teamFeatureGrid,
+  .geofenceFeatureGrid,
+  .geofenceMetricGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .teamPanelHeader,
+  .teamMiniCard,
+  .geofenceToolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 620px) {
+  .teamsShowcase,
+  .geofenceShowcase {
+    padding: 30px;
+    border-radius: 26px;
+  }
+
+  .teamFeatureGrid,
+  .geofenceFeatureGrid,
+  .geofenceMetricGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .geofenceMockMap {
+    min-height: 300px;
+  }
+}
+
+.vendingShowcase {
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(245, 158, 11, 0.16),
+      transparent 34%
+    ),
+    #fffaf0;
+  border: 1px solid #fed7aa;
+  border-radius: 34px;
+  padding: 46px;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.vendingShowcase .eyebrow {
+  color: #c2410c;
+}
+
+.vendingContent .sectionIntro {
+  margin-bottom: 24px;
+}
+
+.vendingFeatureGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.vendingFeatureCard {
+  background: white;
+  border: 1px solid #fed7aa;
+  border-radius: 22px;
+  padding: 20px;
+  box-shadow: 0 14px 32px rgba(154, 52, 18, 0.06);
+}
+
+.vendingFeatureCard h3 {
+  margin: 0 0 10px;
+  color: var(--primary-dark);
+  font-size: 18px;
+}
+
+.vendingFeatureCard p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.vendingPanel {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(245, 158, 11, 0.24),
+      transparent 38%
+    ),
+    var(--primary-dark);
+  color: white;
+  border-radius: 30px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.vendingPanelHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.vendingPanelHeader p {
+  margin: 0 0 6px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.vendingPanelHeader strong {
+  display: block;
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+.vendingPanelHeader > span {
+  background: rgba(245, 158, 11, 0.18);
+  border: 1px solid rgba(245, 158, 11, 0.34);
+  color: #fed7aa;
+  border-radius: 999px;
+  padding: 8px 11px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.vendingFlow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.vendingFlow span {
+  background: white;
+  color: #9a3412;
+  border-radius: 999px;
+  padding: 10px 13px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.vendingMetricGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.vendingMetricCard {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 20px;
+  padding: 16px;
+}
+
+.vendingMetricCard p {
+  margin: 0 0 8px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.vendingMetricCard strong {
+  color: white;
+  font-size: 28px;
+}
+
+@media (max-width: 1000px) {
+  .vendingShowcase {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .vendingFeatureGrid,
+  .vendingMetricGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .vendingPanelHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 620px) {
+  .vendingShowcase {
+    padding: 30px;
+    border-radius: 26px;
+  }
+}

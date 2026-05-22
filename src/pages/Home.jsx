@@ -5,6 +5,11 @@ import FeatureCard from "../components/FeatureCard";
 import NetworkModelSection from "../components/NetworkModelSection";
 import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer";
+import DashboardShowcase from "../components/DashboardShowcase";
+import MapGisShowcase from "../components/MapGisShowcase";
+import TeamsShowcase from "../components/TeamsShowcase";
+import GeofencesShowcase from "../components/GeofencesShowcase";
+import VendingShowcase from "../components/VendingShowcase";
 
 import {
   modules,
@@ -82,6 +87,16 @@ function Home() {
         steps={energyNetworkSteps}
         valueCards={energyValueCards}
       />
+
+      <MapGisShowcase />
+
+      <TeamsShowcase />
+
+      <GeofencesShowcase />
+
+      <VendingShowcase />
+
+      <DashboardShowcase />
 
       <section className="section valueSection">
         <SectionHeader

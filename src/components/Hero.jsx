@@ -2,21 +2,22 @@ import { heroStats } from "../data/websiteContent";
 
 function Hero() {
   return (
-    <section className="hero">
+    <section id="top" className="hero">
       <div className="heroContent">
         <p className="eyebrow">
           Municipal infrastructure • Field operations • Revenue protection
         </p>
 
         <h1>
-          Manage infrastructure, workorders, meter lifecycles, and revenue
-          protection from one ward-scoped platform.
+          The digital operating platform for municipal infrastructure,
+          workorders, meters, and revenue protection.
         </h1>
 
         <p className="heroText">
-          iREPS helps municipalities and service providers collect authentic
-          field data, manage operational work, monitor infrastructure assets,
-          and produce reliable reports for better decision-making.
+          iREPS helps municipalities and service providers manage field work,
+          meter lifecycle transactions, infrastructure records, authentic
+          evidence, dashboards, and billing-readiness from a ward-scoped
+          operational system.
         </p>
 
         <div className="heroActions">
@@ -25,7 +26,7 @@ function Hero() {
           </a>
 
           <a className="secondaryButton" href="#product">
-            Explore iREPS
+            Explore the Platform
           </a>
         </div>
       </div>
@@ -38,9 +39,12 @@ function Hero() {
         </div>
 
         <div className="dashboardCard big">
-          <p>Ward Operations</p>
-          <strong>13 active wards</strong>
-          <small>Infrastructure, meters, workorders, and reports</small>
+          <p>iREPS Operations View</p>
+          <strong>Ward-scoped control</strong>
+          <small>
+            Infrastructure records, meter lifecycles, workorders, field
+            evidence, dashboards, and reports.
+          </small>
         </div>
 
         <div className="dashboardGrid">
