@@ -11,6 +11,9 @@ import TeamsShowcase from "../components/TeamsShowcase";
 import GeofencesShowcase from "../components/GeofencesShowcase";
 import VendingShowcase from "../components/VendingShowcase";
 import FieldToOfficeSection from "../components/FieldToOfficeSection";
+import OnboardingShowcase from "../components/OnboardingShowcase";
+import UserRolesShowcase from "../components/UserRolesShowcase";
+import DataFlowDiagramSection from "../components/DataFlowDiagramSection";
 
 import {
   modules,
@@ -30,6 +33,12 @@ function Home() {
       <Hero />
 
       <FieldToOfficeSection />
+
+      <OnboardingShowcase />
+
+      <UserRolesShowcase />
+
+      <DataFlowDiagramSection />
 
       <section id="product" className="section">
         <SectionHeader

@@ -2150,3 +2150,514 @@ a {
     width: 138px;
   }
 }
+
+.onboardingShowcase {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(15, 118, 110, 0.13),
+      transparent 34%
+    ),
+    #f8fbfd;
+  border: 1px solid var(--border);
+  border-radius: 34px;
+  padding: 46px;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.onboardingContent .sectionIntro {
+  margin-bottom: 24px;
+}
+
+.onboardingValueGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.onboardingValueCard {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 18px;
+  color: var(--primary-dark);
+  font-weight: 900;
+  line-height: 1.45;
+  box-shadow: 0 12px 26px rgba(15, 61, 94, 0.05);
+}
+
+.onboardingPanel {
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(45, 212, 191, 0.18),
+      transparent 34%
+    ),
+    var(--primary-dark);
+  color: white;
+  border-radius: 30px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.onboardingPanelHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.onboardingPanelHeader p {
+  margin: 0 0 6px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.onboardingPanelHeader strong {
+  display: block;
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+.onboardingPanelHeader > span {
+  background: rgba(45, 212, 191, 0.14);
+  border: 1px solid rgba(45, 212, 191, 0.28);
+  color: #99f6e4;
+  border-radius: 999px;
+  padding: 8px 11px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.onboardingTimeline {
+  display: grid;
+  gap: 12px;
+}
+
+.onboardingStep {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 20px;
+  padding: 16px;
+}
+
+.onboardingStep > span {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: white;
+  color: var(--primary-dark);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.onboardingStep strong {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.onboardingStep p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.55;
+}
+
+.userRolesShowcase {
+  background:
+    radial-gradient(
+      circle at bottom right,
+      rgba(15, 61, 94, 0.11),
+      transparent 32%
+    ),
+    #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 34px;
+  padding: 46px;
+  box-shadow: 0 18px 48px rgba(15, 61, 94, 0.08);
+}
+
+.userRolesShowcase .sectionIntro {
+  margin-bottom: 24px;
+}
+
+.roleFlow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.roleFlow span {
+  background: var(--soft);
+  color: var(--accent);
+  border: 1px solid rgba(15, 118, 110, 0.18);
+  border-radius: 999px;
+  padding: 10px 13px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.userRoleGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.userRoleCard {
+  background: #f8fbfd;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.roleBadge {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: var(--primary);
+  color: white;
+  font-size: 14px;
+  font-weight: 900;
+  box-shadow: 0 12px 24px rgba(15, 61, 94, 0.16);
+}
+
+.userRoleCard h3 {
+  margin: 0 0 9px;
+  color: var(--primary-dark);
+  font-size: 19px;
+}
+
+.userRoleCard p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.navLinks {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  row-gap: 10px;
+  max-width: 860px;
+}
+
+@media (max-width: 1000px) {
+  .onboardingShowcase {
+    grid-template-columns: 1fr;
+  }
+
+  .userRoleGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navLinks {
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .onboardingValueGrid,
+  .userRoleGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .onboardingPanelHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 620px) {
+  .onboardingShowcase,
+  .userRolesShowcase {
+    padding: 30px;
+    border-radius: 26px;
+  }
+
+  .userRoleCard {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dataFlowSection {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(15, 118, 110, 0.12),
+      transparent 32%
+    ),
+    #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 34px;
+  padding: 46px;
+  box-shadow: 0 18px 48px rgba(15, 61, 94, 0.08);
+}
+
+.dataFlowSection .sectionIntro {
+  margin-bottom: 30px;
+}
+
+.dataFlowDiagram {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr 60px 1.08fr 60px 1.1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.dataFlowColumn {
+  display: grid;
+  gap: 14px;
+}
+
+.dataFlowNode,
+.dataFlowServer,
+.dataFlowActionHeader {
+  background: #f8fbfd;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 20px;
+}
+
+.dataFlowNode strong,
+.dataFlowServer strong,
+.dataFlowActionHeader strong {
+  display: block;
+  color: var(--primary-dark);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.dataFlowNode p,
+.dataFlowServer p,
+.dataFlowActionHeader p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+.meterIcon {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  display: block;
+  margin-bottom: 14px;
+  background:
+    radial-gradient(circle at center, #0f766e 0 22%, transparent 23%),
+    conic-gradient(#0f766e 0deg 240deg, #dbe5ef 240deg 360deg);
+  box-shadow: inset 0 0 0 14px white;
+  border: 1px solid var(--border);
+}
+
+.cloudMiniIcon {
+  width: 76px;
+  height: 52px;
+  display: block;
+  margin-bottom: 14px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 34% 38%, #99f6e4 0 18%, transparent 19%),
+    radial-gradient(circle at 55% 28%, #99f6e4 0 22%, transparent 23%),
+    radial-gradient(circle at 70% 42%, #99f6e4 0 18%, transparent 19%), #e9f4f3;
+  border: 1px solid rgba(15, 118, 110, 0.24);
+}
+
+.dataFlowActionHeader {
+  background: var(--primary-dark);
+}
+
+.dataFlowActionHeader strong {
+  color: white;
+}
+
+.dataFlowActionHeader p {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.dataFlowActionList {
+  display: grid;
+  gap: 9px;
+}
+
+.dataFlowActionList span {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 13px;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.dataFlowArrows {
+  display: grid;
+  gap: 18px;
+  justify-items: center;
+}
+
+.dataFlowArrows span {
+  width: 100%;
+  height: 4px;
+  border-radius: 999px;
+  display: block;
+  position: relative;
+  background: linear-gradient(90deg, transparent, var(--accent));
+}
+
+.dataFlowArrows span::after {
+  content: "";
+  position: absolute;
+  right: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left: 10px solid var(--accent);
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+
+.dataFlowServer {
+  text-align: center;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(45, 212, 191, 0.16),
+      transparent 34%
+    ),
+    var(--primary-dark);
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.dataFlowServer strong {
+  color: white;
+  font-size: 22px;
+}
+
+.dataFlowServer p {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.serverTower {
+  width: 110px;
+  height: 150px;
+  border-radius: 26px;
+  margin: 0 auto 18px;
+  background: linear-gradient(145deg, #0f3d5e, #08283f);
+  border: 4px solid rgba(255, 255, 255, 0.16);
+  display: grid;
+  gap: 10px;
+  padding: 22px;
+}
+
+.serverTower span {
+  border-radius: 999px;
+  background: #2dd4bf;
+  box-shadow: 0 0 18px rgba(45, 212, 191, 0.5);
+}
+
+.dataFlowMapPreview {
+  position: relative;
+  min-height: 190px;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(90deg, rgba(15, 61, 94, 0.06) 1px, transparent 1px),
+    linear-gradient(rgba(15, 61, 94, 0.06) 1px, transparent 1px),
+    linear-gradient(145deg, #dff1ed, #f8fbfd);
+  background-size: 26px 26px;
+  overflow: hidden;
+}
+
+.miniMapShape {
+  position: absolute;
+  width: 170px;
+  height: 125px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-10deg);
+  border: 3px dashed rgba(15, 118, 110, 0.78);
+  background: rgba(15, 118, 110, 0.1);
+  border-radius: 44% 36% 52% 38%;
+}
+
+.miniMapDot {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--primary);
+  border: 3px solid white;
+  box-shadow: 0 10px 18px rgba(15, 61, 94, 0.18);
+}
+
+.miniMapDot.one {
+  left: 36%;
+  top: 38%;
+}
+
+.miniMapDot.two {
+  left: 56%;
+  top: 52%;
+  background: var(--accent);
+}
+
+.miniMapDot.three {
+  left: 66%;
+  top: 34%;
+  background: #f59e0b;
+}
+
+.dataFlowOutputGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.dataFlowOutputGrid span {
+  background: #f8fbfd;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 12px;
+  color: var(--primary-dark);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+@media (max-width: 1100px) {
+  .dataFlowDiagram {
+    grid-template-columns: 1fr;
+  }
+
+  .dataFlowArrows {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .dataFlowSection {
+    padding: 30px;
+    border-radius: 26px;
+  }
+
+  .dataFlowOutputGrid {
+    grid-template-columns: 1fr;
+  }
+}

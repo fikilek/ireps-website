@@ -1,7 +1,10 @@
 export const navLinks = [
   { label: "Product", href: "#product" },
   { label: "How it Works", href: "#field-to-office" },
+  { label: "Onboarding", href: "#onboarding" },
+  { label: "Roles", href: "#roles" },
   { label: "Operations", href: "#operations" },
+  { label: "Data Flow", href: "#data-flow" },
   { label: "Water", href: "#water" },
   { label: "Energy", href: "#energy" },
   { label: "GIS Maps", href: "#gis" },
@@ -290,4 +293,97 @@ export const fieldToOfficeCards = [
     title: "Office intelligence",
     text: "Managers use iREPS Web/Desktop to review dashboards, GIS maps, reports, and operational work queues.",
   },
+];
+
+export const onboardingSteps = [
+  {
+    title: "Sign up",
+    text: "A user starts by creating an iREPS account and providing basic profile details.",
+  },
+  {
+    title: "Profile verification",
+    text: "The user profile is reviewed before operational access is granted.",
+  },
+  {
+    title: "Workbase assignment",
+    text: "The user is linked to the correct municipal or service-provider operating scope.",
+  },
+  {
+    title: "Role allocation",
+    text: "The user receives a role such as manager, supervisor, fieldworker, or administrator.",
+  },
+  {
+    title: "Access activation",
+    text: "Once approved, the user can work inside the correct iREPS environment and scope.",
+  },
+];
+
+export const onboardingValueCards = [
+  "Controlled user entry into iREPS",
+  "Workbase and ward-aware access",
+  "Role-based operational permissions",
+  "Clear accountability for field and office activity",
+];
+
+export const userRoleCards = [
+  {
+    role: "SPU",
+    name: "Super User",
+    text: "High-level platform administration, configuration oversight, and system-level control.",
+  },
+  {
+    role: "ADM",
+    name: "Administrator",
+    text: "Administrative support for users, registries, settings, and operational configuration.",
+  },
+  {
+    role: "MNG",
+    name: "Manager",
+    text: "Creates and controls workorders, monitors dashboards, reviews reports, and manages operational progress.",
+  },
+  {
+    role: "SPV(MNC)",
+    name: "Main Contractor Supervisor",
+    text: "Supports manager-level field coordination, office-originated work instructions, and operational oversight.",
+  },
+  {
+    role: "SPV(SUBC)",
+    name: "Subcontractor Supervisor",
+    text: "Executes assigned field work and supervises subcontractor-side field activity where allowed.",
+  },
+  {
+    role: "FWR",
+    name: "Fieldworker",
+    text: "Captures field data, executes assigned workorders, submits evidence, readings, GPS context, and outcomes.",
+  },
+];
+
+export const roleFlowSteps = [
+  "User profile",
+  "Workbase",
+  "Role",
+  "Ward scope",
+  "Permissions",
+  "Work execution",
+  "Reporting",
+];
+
+export const dataFlowFieldActions = [
+  "Meter Discovery",
+  "Meter Installation",
+  "Meter Reading",
+  "Inspection / Audit",
+  "Disconnection",
+  "Reconnection",
+  "Removal",
+  "Commissioning",
+];
+
+export const dataFlowOutputs = [
+  "GIS Maps",
+  "Dashboards",
+  "Reports",
+  "Workorders",
+  "Revenue Protection",
+  "Credit Control",
 ];
