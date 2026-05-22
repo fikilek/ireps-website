@@ -47,16 +47,16 @@ export const waterNetworkSteps = [
 ];
 
 export const energyNetworkSteps = [
-  "Bulk Supply",
-  "Substation",
-  "Feeder",
-  "Transformer",
   "Service Connection",
-  "Consumer Meter",
+  "Meter Installation",
+  "Meter Discovery",
   "Meter Reading",
+  "Meter Decommissioning",
   "Billing",
   "Revenue",
   "Credit Control",
+  "Meter Disconnection",
+  "Meter Reconnection",
 ];
 
 export const waterValueCards = [
