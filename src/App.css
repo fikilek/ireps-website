@@ -446,3 +446,52 @@ a {
     gap: 12px;
   }
 }
+
+.energySection {
+  background: #fff7ed;
+  border-radius: 34px;
+  padding: 46px;
+}
+
+.energySection .eyebrow {
+  color: #c2410c;
+}
+
+.energyFlow span {
+  color: #9a3412;
+}
+
+.modelValueGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.modelValueCard {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 18px;
+  color: var(--primary-dark);
+  font-weight: 800;
+  line-height: 1.45;
+  box-shadow: 0 12px 26px rgba(15, 61, 94, 0.05);
+}
+
+@media (max-width: 900px) {
+  .modelValueGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .energySection {
+    padding: 30px;
+    border-radius: 26px;
+  }
+
+  .modelValueGrid {
+    grid-template-columns: 1fr;
+  }
+}

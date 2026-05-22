@@ -8,7 +8,10 @@ import Footer from "../components/Footer";
 import {
   modules,
   operationSteps,
-  networkSteps,
+  waterNetworkSteps,
+  energyNetworkSteps,
+  waterValueCards,
+  energyValueCards,
   valueCards,
 } from "../data/websiteContent";
 
@@ -62,16 +65,51 @@ function Home() {
       <section id="water" className="section waterSection">
         <SectionHeader
           eyebrow="Water & sanitation model"
-          title="Follow the network from source to consumer revenue."
+          title="Follow the water network from source to consumer revenue."
         >
           iREPS can support infrastructure data collection across the water and
           sanitation value chain, from source and treatment to storage,
-          distribution, consumer readings, billing, and credit control.
+          distribution, consumer readings, billing-readiness, revenue, and
+          credit control.
         </SectionHeader>
 
         <div className="networkFlow">
-          {networkSteps.map((step) => (
+          {waterNetworkSteps.map((step) => (
             <span key={step}>{step}</span>
+          ))}
+        </div>
+
+        <div className="modelValueGrid">
+          {waterValueCards.map((item) => (
+            <div className="modelValueCard" key={item}>
+              {item}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="energy" className="section energySection">
+        <SectionHeader
+          eyebrow="Energy revenue model"
+          title="Connect electricity infrastructure to meter readings, billing, and revenue protection."
+        >
+          iREPS supports electricity field operations by linking infrastructure
+          visibility, meter lifecycle transactions, conventional meter readings,
+          workorders, billing-readiness, revenue monitoring, and credit control
+          support.
+        </SectionHeader>
+
+        <div className="networkFlow energyFlow">
+          {energyNetworkSteps.map((step) => (
+            <span key={step}>{step}</span>
+          ))}
+        </div>
+
+        <div className="modelValueGrid">
+          {energyValueCards.map((item) => (
+            <div className="modelValueCard" key={item}>
+              {item}
+            </div>
           ))}
         </div>
       </section>

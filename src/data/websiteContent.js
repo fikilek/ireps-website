@@ -1,7 +1,8 @@
 export const navLinks = [
   { label: "Product", href: "#product" },
   { label: "Operations", href: "#operations" },
-  { label: "Water & Sanitation", href: "#water" },
+  { label: "Water", href: "#water" },
+  { label: "Energy", href: "#energy" },
   { label: "Request Demo", href: "#demo" },
 ];
 
@@ -33,14 +34,43 @@ export const modules = [
 
 export const operationSteps = ["Issue", "Accept", "Execute", "Report"];
 
-export const networkSteps = [
+export const waterNetworkSteps = [
   "Source",
   "Treatment",
   "Storage",
   "Distribution",
   "Consumer",
+  "Meter Reading",
   "Billing",
   "Revenue",
+  "Credit Control",
+];
+
+export const energyNetworkSteps = [
+  "Bulk Supply",
+  "Substation",
+  "Feeder",
+  "Transformer",
+  "Service Connection",
+  "Consumer Meter",
+  "Meter Reading",
+  "Billing",
+  "Revenue",
+  "Credit Control",
+];
+
+export const waterValueCards = [
+  "Track infrastructure from source to consumer",
+  "Support leakage and loss investigation points",
+  "Strengthen consumer meter reading quality",
+  "Improve billing-readiness for water services",
+];
+
+export const energyValueCards = [
+  "Track electricity infrastructure down to meter level",
+  "Support meter lifecycle work and field verification",
+  "Improve reading quality for conventional meters",
+  "Strengthen revenue protection and credit control actions",
 ];
 
 export const valueCards = [
