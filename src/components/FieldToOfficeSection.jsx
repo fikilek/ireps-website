@@ -1,7 +1,7 @@
 import { fieldToOfficeCards, fieldToOfficeSteps } from "../data/websiteContent";
 import SectionHeader from "./SectionHeader";
 
-const hasExplainerVideo = false;
+const hasExplainerVideo = true;
 
 function FieldToOfficeSection() {
   return (
@@ -52,6 +52,8 @@ function FieldToOfficeSection() {
             muted
             loop
             playsInline
+            controls
+            preload="metadata"
             poster="/images/ireps-field-to-office-poster.png"
           >
             <source src="/videos/ireps-field-to-office.mp4" type="video/mp4" />

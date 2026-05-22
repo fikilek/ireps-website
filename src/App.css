@@ -1836,11 +1836,13 @@ a {
 
 .fieldVideo {
   width: 100%;
-  min-height: 380px;
-  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: contain;
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   background: #08283f;
+  display: block;
 }
 
 .fieldStoryboard {
