@@ -1700,3 +1700,451 @@ a {
     border-radius: 26px;
   }
 }
+
+.fieldToOfficeSection {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(15, 118, 110, 0.14),
+      transparent 32%
+    ),
+    #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 34px;
+  padding: 46px;
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: 30px;
+  align-items: center;
+  box-shadow: 0 18px 48px rgba(15, 61, 94, 0.08);
+}
+
+.fieldToOfficeContent .sectionIntro {
+  margin-bottom: 24px;
+}
+
+.fieldToOfficeCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.fieldToOfficeCard {
+  background: #f8fbfd;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 18px;
+}
+
+.fieldToOfficeCard h3 {
+  margin: 0 0 8px;
+  color: var(--primary-dark);
+  font-size: 17px;
+}
+
+.fieldToOfficeCard p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+.fieldStepList {
+  display: grid;
+  gap: 10px;
+}
+
+.fieldStep {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: center;
+  background: #f8fbfd;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 12px 14px;
+}
+
+.fieldStep span {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--primary);
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.fieldStep p {
+  margin: 0;
+  color: var(--primary-dark);
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.fieldVideoPanel {
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(45, 212, 191, 0.18),
+      transparent 34%
+    ),
+    var(--primary-dark);
+  border-radius: 30px;
+  padding: 20px;
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.videoFrameHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.videoFrameHeader strong,
+.videoFrameHeader span {
+  display: block;
+}
+
+.videoFrameHeader strong {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.videoFrameHeader span {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.videoFrameHeader p {
+  margin: 0;
+  background: rgba(45, 212, 191, 0.14);
+  border: 1px solid rgba(45, 212, 191, 0.28);
+  color: #99f6e4;
+  border-radius: 999px;
+  padding: 8px 11px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.fieldVideo {
+  width: 100%;
+  min-height: 380px;
+  object-fit: cover;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: #08283f;
+}
+
+.fieldStoryboard {
+  position: relative;
+  min-height: 390px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 18px;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 24px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    rgba(255, 255, 255, 0.06);
+  background-size: 28px 28px;
+}
+
+.storyScene {
+  min-height: 290px;
+  border-radius: 24px;
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.fieldScene {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(15, 118, 110, 0.36),
+      transparent 36%
+    ),
+    rgba(255, 255, 255, 0.08);
+}
+
+.officeScene {
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(59, 130, 246, 0.34),
+      transparent 36%
+    ),
+    rgba(255, 255, 255, 0.08);
+}
+
+.storyScene p {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 14px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 13px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.cartoonPerson {
+  position: absolute;
+  width: 80px;
+  height: 150px;
+  bottom: 54px;
+}
+
+.fieldWorker {
+  left: 38px;
+}
+
+.managerPerson {
+  left: 34px;
+}
+
+.personHead {
+  position: absolute;
+  left: 25px;
+  top: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: #fed7aa;
+  border: 3px solid white;
+}
+
+.personBody {
+  position: absolute;
+  left: 18px;
+  top: 38px;
+  width: 48px;
+  height: 72px;
+  border-radius: 18px 18px 10px 10px;
+  background: #0f766e;
+  border: 3px solid white;
+}
+
+.managerPerson .personBody {
+  background: #2563eb;
+}
+
+.personPhone {
+  position: absolute;
+  right: 0;
+  top: 58px;
+  width: 24px;
+  height: 42px;
+  border-radius: 8px;
+  background: #111827;
+  border: 3px solid white;
+  transform: rotate(-8deg);
+}
+
+.meterKiosk {
+  position: absolute;
+  right: 30px;
+  bottom: 74px;
+  width: 94px;
+  height: 130px;
+  border-radius: 18px;
+  background: #f8fafc;
+  color: var(--primary-dark);
+  border: 4px solid rgba(255, 255, 255, 0.92);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.18);
+}
+
+.meterKiosk span {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  background: conic-gradient(#0f766e 0deg 230deg, #dbe5ef 230deg 360deg);
+  box-shadow: inset 0 0 0 10px white;
+}
+
+.meterKiosk strong {
+  font-size: 12px;
+}
+
+.syncBeam {
+  min-width: 106px;
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  color: #99f6e4;
+  font-weight: 900;
+  text-align: center;
+}
+
+.syncBeam span {
+  width: 76px;
+  height: 76px;
+  border-radius: 999px;
+  display: block;
+  position: relative;
+  background:
+    radial-gradient(circle, #99f6e4 0 22%, transparent 23%),
+    radial-gradient(circle at 38% 58%, #99f6e4 0 18%, transparent 19%),
+    radial-gradient(circle at 63% 58%, #99f6e4 0 18%, transparent 19%);
+  animation: cloudPulse 2.6s ease-in-out infinite;
+}
+
+.syncBeam span::before,
+.syncBeam span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 52px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #99f6e4, transparent);
+}
+
+.syncBeam span::before {
+  right: 76px;
+}
+
+.syncBeam span::after {
+  left: 76px;
+}
+
+.laptopMock {
+  position: absolute;
+  right: 26px;
+  bottom: 74px;
+  width: 160px;
+  height: 108px;
+  border-radius: 14px;
+  background: #dbeafe;
+  border: 4px solid white;
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.18);
+  padding: 12px;
+}
+
+.laptopScreen {
+  height: 100%;
+  border-radius: 10px;
+  background: var(--primary-dark);
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 8px;
+  padding: 10px;
+}
+
+.laptopScreen span {
+  border-radius: 8px;
+  background: #2dd4bf;
+}
+
+.laptopScreen span:nth-child(2) {
+  background: #60a5fa;
+}
+
+.laptopScreen span:nth-child(3) {
+  grid-column: 1 / -1;
+  background: #fbbf24;
+}
+
+.videoCaption {
+  margin-top: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 20px;
+  padding: 16px;
+}
+
+.videoCaption strong,
+.videoCaption span {
+  display: block;
+}
+
+.videoCaption strong {
+  margin-bottom: 5px;
+}
+
+.videoCaption span {
+  color: rgba(255, 255, 255, 0.74);
+  line-height: 1.5;
+}
+
+@keyframes cloudPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.84;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1100px) {
+  .fieldToOfficeSection {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .fieldToOfficeCards {
+    grid-template-columns: 1fr;
+  }
+
+  .fieldStoryboard {
+    grid-template-columns: 1fr;
+  }
+
+  .syncBeam span::before,
+  .syncBeam span::after {
+    display: none;
+  }
+
+  .storyScene {
+    min-height: 250px;
+  }
+
+  .syncBeam {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .fieldToOfficeSection {
+    padding: 30px;
+    border-radius: 26px;
+  }
+
+  .videoFrameHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .meterKiosk {
+    right: 18px;
+    width: 82px;
+  }
+
+  .laptopMock {
+    right: 16px;
+    width: 138px;
+  }
+}

@@ -10,6 +10,7 @@ import MapGisShowcase from "../components/MapGisShowcase";
 import TeamsShowcase from "../components/TeamsShowcase";
 import GeofencesShowcase from "../components/GeofencesShowcase";
 import VendingShowcase from "../components/VendingShowcase";
+import FieldToOfficeSection from "../components/FieldToOfficeSection";
 
 import {
   modules,
@@ -27,6 +28,8 @@ function Home() {
       <Navbar />
 
       <Hero />
+
+      <FieldToOfficeSection />
 
       <section id="product" className="section">
         <SectionHeader

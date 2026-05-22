@@ -1,5 +1,6 @@
 export const navLinks = [
   { label: "Product", href: "#product" },
+  { label: "How it Works", href: "#field-to-office" },
   { label: "Operations", href: "#operations" },
   { label: "Water", href: "#water" },
   { label: "Energy", href: "#energy" },
@@ -265,4 +266,28 @@ export const vendingMetricCards = [
   { label: "Vending confirmed", value: "96%" },
   { label: "Revenue exceptions", value: "52" },
   { label: "Follow-up workorders", value: "31" },
+];
+
+export const fieldToOfficeSteps = [
+  "FWR visits the meter kiosk",
+  "iREPS Mobile guides the field form",
+  "Photos, GPS, meter details, and outcome are captured",
+  "Data is submitted to the cloud",
+  "MNG reviews the work on iREPS Web/Desktop",
+  "Dashboards, maps, reports, and workorders support decisions",
+];
+
+export const fieldToOfficeCards = [
+  {
+    title: "Field capture",
+    text: "Fieldworkers collect structured meter and infrastructure data on site using iREPS Mobile.",
+  },
+  {
+    title: "Cloud submission",
+    text: "Completed forms, evidence, GPS context, and workflow outcomes are submitted to the cloud.",
+  },
+  {
+    title: "Office intelligence",
+    text: "Managers use iREPS Web/Desktop to review dashboards, GIS maps, reports, and operational work queues.",
+  },
 ];
