@@ -1,4 +1,5 @@
 import "./App.css";
+import "./premiumPatch.css";
 import Home from "./pages/Home";
 
 function App() {
