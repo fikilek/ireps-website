@@ -5,9 +5,8 @@ function Hero() {
   const contentRef = useScrollReveal();
 
   return (
-    <section id="top" className="hero">
-      {/* Animated background elements */}
-      <div className="heroBg">
+    <section id="top" className="hero premiumHero">
+      <div className="heroBg" aria-hidden="true">
         <div className="heroGradient heroGradient1" />
         <div className="heroGradient heroGradient2" />
         <div className="heroGradient heroGradient3" />
@@ -19,99 +18,121 @@ function Hero() {
         </div>
       </div>
 
-      <div className="heroContent" ref={contentRef}>
-        <div className="heroBadge reveal">
-          <span className="badgeDot" />
-          Municipal Infrastructure Platform
-        </div>
-
-        <h1 className="reveal">
-          The digital operating system for{" "}
-          <span className="gradientText">municipal infrastructure</span>
-          {" "}& revenue protection.
-        </h1>
-
-        <p className="heroText reveal">
-          iREPS connects fieldworkers, mobile capture, workorder control, meter
-          lifecycle transactions, GIS maps, dashboards, and revenue protection
-          into one ward-scoped operating platform.
-        </p>
-
-        <div className="heroActions reveal">
-          <a className="primaryButton" href="#demo">
-            Request a Demo
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </a>
-          <a className="secondaryButton" href="#product">
-            Explore Platform
-          </a>
-        </div>
-
-        {/* Stats row */}
-        <div className="heroStats reveal">
-          <div className="heroStatItem">
-            <span className="heroStatValue">5,394+</span>
-            <span className="heroStatLabel">ERFs Managed</span>
+      <div className="heroShell" ref={contentRef}>
+        <div className="heroContent">
+          <div className="heroBadge reveal">
+            <span className="badgeDot" />
+            Municipal Infrastructure Platform
           </div>
-          <div className="heroStatDivider" />
-          <div className="heroStatItem">
-            <span className="heroStatValue">8,462+</span>
-            <span className="heroStatLabel">Meters Tracked</span>
+
+          <h1 className="reveal">
+            Field operations, infrastructure data, and{" "}
+            <span className="gradientText">revenue protection</span>{" "}
+            in one platform.
+          </h1>
+
+          <p className="heroText reveal">
+            iREPS helps municipalities and service providers manage ward-scoped
+            fieldwork, meter lifecycle transactions, GIS maps, dashboards,
+            evidence, reporting, and billing-readiness from one modern operating
+            platform.
+          </p>
+
+          <div className="heroActions reveal">
+            <a className="primaryButton" href="#demo">
+              Request a Demo
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M3 8h10M9 4l4 4-4 4"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </a>
+
+            <a className="secondaryButton" href="#field-to-office">
+              Watch Field Flow
+            </a>
           </div>
-          <div className="heroStatDivider" />
-          <div className="heroStatItem">
-            <span className="heroStatValue">97%</span>
-            <span className="heroStatLabel">Reading Rate</span>
-          </div>
-          <div className="heroStatDivider" />
-          <div className="heroStatItem">
-            <span className="heroStatValue">Live</span>
-            <span className="heroStatLabel">Revenue Checks</span>
+
+          <div className="heroProof reveal">
+            <span>Ward-scoped</span>
+            <span>Offline-ready capture</span>
+            <span>GIS intelligence</span>
+            <span>Audit evidence</span>
           </div>
         </div>
-      </div>
 
-      {/* Floating dashboard mockup */}
-      <div className="heroVisual reveal">
-        <div className="heroMockup">
-          <div className="mockupHeader">
-            <span className="mockupDot dotRed" />
-            <span className="mockupDot dotYellow" />
-            <span className="mockupDot dotGreen" />
-            <span className="mockupTitle">iREPS Operations View</span>
-          </div>
+        <div className="heroVisual reveal" aria-label="iREPS operations view mockup">
+          <div className="heroOrbitGlow" />
 
-          <div className="mockupBody">
-            <div className="mockupCard mockupMain">
-              <div className="mockupCardLabel">Ward-scoped Control</div>
-              <div className="mockupBar">
-                <div className="mockupBarFill" style={{ width: "78%" }} />
-              </div>
-              <div className="mockupBar">
-                <div className="mockupBarFill" style={{ width: "62%" }} />
-              </div>
-              <div className="mockupBar">
-                <div className="mockupBarFill" style={{ width: "91%" }} />
-              </div>
+          <div className="heroMockup premiumMockup">
+            <div className="mockupHeader">
+              <span className="mockupDot dotRed" />
+              <span className="mockupDot dotYellow" />
+              <span className="mockupDot dotGreen" />
+              <span className="mockupTitle">iREPS Command Centre</span>
             </div>
 
-            <div className="mockupGrid">
-              {heroStats.slice(0, 4).map((item) => (
-                <div className="mockupMiniCard" key={item.label}>
-                  <span className="mockupMiniLabel">{item.label}</span>
-                  <span className="mockupMiniValue">{item.value}</span>
+            <div className="premiumMockupBody">
+              <div className="commandTopRow">
+                <div>
+                  <p>Live municipal view</p>
+                  <strong>Ward Operations</strong>
                 </div>
-              ))}
-            </div>
+                <span>ONLINE</span>
+              </div>
 
-            <div className="mockupMap">
-              <div className="mockupMapPin pin1" />
-              <div className="mockupMapPin pin2" />
-              <div className="mockupMapPin pin3" />
-              <div className="mockupMapPin pin4" />
-              <div className="mockupMapLine" />
+              <div className="commandMap">
+                <span className="wardShape wardShapeOne" />
+                <span className="wardShape wardShapeTwo" />
+                <i className="commandPin commandPinOne" />
+                <i className="commandPin commandPinTwo" />
+                <i className="commandPin commandPinThree" />
+                <i className="commandRoute" />
+              </div>
+
+              <div className="commandMetricGrid">
+                {heroStats.slice(0, 4).map((item) => (
+                  <div className="commandMetric" key={item.label}>
+                    <span>{item.label}</span>
+                    <strong>{item.value}</strong>
+                  </div>
+                ))}
+              </div>
+
+              <div className="commandTimeline">
+                <div>
+                  <span>01</span>
+                  <p>Field capture</p>
+                </div>
+                <div>
+                  <span>02</span>
+                  <p>Cloud sync</p>
+                </div>
+                <div>
+                  <span>03</span>
+                  <p>Office review</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="floatingInsight floatingInsightOne">
+            <span />
+            <div>
+              <strong>Evidence synced</strong>
+              <p>GPS, photos, and TRNs</p>
+            </div>
+          </div>
+
+          <div className="floatingInsight floatingInsightTwo">
+            <span />
+            <div>
+              <strong>Exceptions flagged</strong>
+              <p>Access and meter issues</p>
             </div>
           </div>
         </div>
