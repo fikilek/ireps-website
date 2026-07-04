@@ -47,7 +47,7 @@ function Navbar() {
 
         <div className="brandText">
           <strong>iREPS</strong>
-          <span>Municipal operating platform</span>
+          <span>Intelligent Revenue Enhancement and Protection Solution</span>
         </div>
       </a>
 
