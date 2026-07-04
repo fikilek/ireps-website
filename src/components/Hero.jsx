@@ -22,7 +22,11 @@ function Hero() {
             Municipal Infrastructure Platform
           </div>
 
-          <h1>Intelligent revenue protection for municipal infrastructure.</h1>
+          <div className="heroTitleStack">
+            <h1>Revenue Enhancement</h1>
+            <h3>for</h3>
+            <h3>Local Government &amp; Utilities</h3>
+          </div>
 
           <p className="heroText">
             iREPS helps municipalities and service providers manage ward-scoped
