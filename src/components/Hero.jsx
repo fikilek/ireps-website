@@ -1,9 +1,6 @@
 import { heroStats } from "../data/websiteContent";
-import useScrollReveal from "../hooks/useScrollReveal";
 
 function Hero() {
-  const contentRef = useScrollReveal();
-
   return (
     <section id="top" className="hero premiumHero">
       <div className="heroBg" aria-hidden="true">
@@ -18,27 +15,27 @@ function Hero() {
         </div>
       </div>
 
-      <div className="heroShell" ref={contentRef}>
+      <div className="heroShell">
         <div className="heroContent">
-          <div className="heroBadge reveal">
+          <div className="heroBadge">
             <span className="badgeDot" />
             Municipal Infrastructure Platform
           </div>
 
-          <h1 className="reveal">
+          <h1>
             Field operations, infrastructure data, and{" "}
             <span className="gradientText">revenue protection</span>{" "}
             in one platform.
           </h1>
 
-          <p className="heroText reveal">
+          <p className="heroText">
             iREPS helps municipalities and service providers manage ward-scoped
             fieldwork, meter lifecycle transactions, GIS maps, dashboards,
             evidence, reporting, and billing-readiness from one modern operating
             platform.
           </p>
 
-          <div className="heroActions reveal">
+          <div className="heroActions">
             <a className="primaryButton" href="#demo">
               Request a Demo
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -57,7 +54,7 @@ function Hero() {
             </a>
           </div>
 
-          <div className="heroProof reveal">
+          <div className="heroProof">
             <span>Ward-scoped</span>
             <span>Offline-ready capture</span>
             <span>GIS intelligence</span>
@@ -65,7 +62,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className="heroVisual reveal" aria-label="iREPS operations view mockup">
+        <div className="heroVisual" aria-label="iREPS operations view mockup">
           <div className="heroOrbitGlow" />
 
           <div className="heroMockup premiumMockup">
