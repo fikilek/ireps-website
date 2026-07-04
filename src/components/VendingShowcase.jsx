@@ -1,16 +1,15 @@
-import {
-  vendingFeatureCards,
-  vendingFlowSteps,
-  vendingMetricCards,
-} from "../data/websiteContent";
+import { vendingFeatureCards, vendingFlowSteps, vendingMetricCards } from "../data/websiteContent";
 import SectionHeader from "./SectionHeader";
+import useScrollReveal from "../hooks/useScrollReveal";
 
 function VendingShowcase() {
+  const featRef = useScrollReveal({ threshold: 0.05 });
+
   return (
     <section id="vending" className="section vendingShowcase">
       <div className="vendingContent">
         <SectionHeader
-          eyebrow="Prepaid vending platform linkage"
+          eyebrow="Prepaid Vending Platform Linkage"
           title="Connect prepaid meters, vending activity, revenue exceptions, and field follow-up."
         >
           iREPS can support prepaid operations by linking meter records, vending
@@ -18,7 +17,7 @@ function VendingShowcase() {
           monitoring, and revenue protection workorders.
         </SectionHeader>
 
-        <div className="vendingFeatureGrid">
+        <div className="vendingFeatureGrid reveal-stagger" ref={featRef}>
           {vendingFeatureCards.map((item) => (
             <article className="vendingFeatureCard" key={item.title}>
               <h3>{item.title}</h3>
@@ -34,7 +33,6 @@ function VendingShowcase() {
             <p>Prepaid revenue view</p>
             <strong>Meter → Vend → Revenue → Action</strong>
           </div>
-
           <span>Integration-ready</span>
         </div>
 

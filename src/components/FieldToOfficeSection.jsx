@@ -1,14 +1,18 @@
 import { fieldToOfficeCards, fieldToOfficeSteps } from "../data/websiteContent";
 import SectionHeader from "./SectionHeader";
+import useScrollReveal from "../hooks/useScrollReveal";
 
 const hasExplainerVideo = true;
 
 function FieldToOfficeSection() {
+  const cardsRef = useScrollReveal({ threshold: 0.05 });
+  const stepsRef = useScrollReveal();
+
   return (
     <section id="field-to-office" className="section fieldToOfficeSection">
       <div className="fieldToOfficeContent">
         <SectionHeader
-          eyebrow="How iREPS works"
+          eyebrow="How iREPS Works"
           title="From field capture to office intelligence."
         >
           iREPS connects fieldworkers, mobile forms, cloud data, and manager
@@ -16,7 +20,7 @@ function FieldToOfficeSection() {
           meter lifecycles, and revenue protection.
         </SectionHeader>
 
-        <div className="fieldToOfficeCards">
+        <div className="fieldToOfficeCards reveal-stagger" ref={cardsRef}>
           {fieldToOfficeCards.map((item) => (
             <article className="fieldToOfficeCard" key={item.title}>
               <h3>{item.title}</h3>
@@ -25,7 +29,7 @@ function FieldToOfficeSection() {
           ))}
         </div>
 
-        <div className="fieldStepList">
+        <div className="fieldStepList reveal" ref={stepsRef}>
           {fieldToOfficeSteps.map((step, index) => (
             <div className="fieldStep" key={step}>
               <span>{String(index + 1).padStart(2, "0")}</span>
@@ -41,7 +45,6 @@ function FieldToOfficeSection() {
             <strong>Field to Office Flow</strong>
             <span>iREPS Mobile → Cloud → iREPS Web</span>
           </div>
-
           <p>Explainer</p>
         </div>
 
@@ -67,12 +70,10 @@ function FieldToOfficeSection() {
                 <span className="personBody"></span>
                 <span className="personPhone"></span>
               </div>
-
               <div className="meterKiosk">
                 <span></span>
                 <strong>METER</strong>
               </div>
-
               <p>FWR captures data at meter kiosk</p>
             </div>
 
@@ -86,7 +87,6 @@ function FieldToOfficeSection() {
                 <span className="personHead"></span>
                 <span className="personBody"></span>
               </div>
-
               <div className="laptopMock">
                 <div className="laptopScreen">
                   <span></span>
@@ -94,7 +94,6 @@ function FieldToOfficeSection() {
                   <span></span>
                 </div>
               </div>
-
               <p>MNG reviews dashboards and reports</p>
             </div>
           </div>
@@ -103,8 +102,7 @@ function FieldToOfficeSection() {
         <div className="videoCaption">
           <strong>One operational chain</strong>
           <span>
-            Field evidence, meter data, workorders, GIS context, dashboards, and
-            reports.
+            Field evidence, meter data, workorders, GIS context, dashboards, and reports.
           </span>
         </div>
       </div>

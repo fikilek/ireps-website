@@ -1,17 +1,15 @@
-import {
-  dashboardBarData,
-  dashboardMetricCards,
-  dashboardTableRows,
-} from "../data/websiteContent";
+import { dashboardBarData, dashboardMetricCards, dashboardTableRows } from "../data/websiteContent";
+import useScrollReveal from "../hooks/useScrollReveal";
 
 function DashboardShowcase() {
+  const introRef = useScrollReveal();
+  const gridRef = useScrollReveal({ threshold: 0.05 });
+
   return (
     <section id="dashboards" className="section dashboardShowcase">
-      <div className="sectionIntro dashboardIntro">
-        <p className="eyebrow">Dashboards & reporting</p>
-
+      <div className="sectionIntro dashboardIntro" ref={introRef}>
+        <p className="eyebrow">Dashboards & Reporting</p>
         <h2>Turn field activity into clear operational intelligence.</h2>
-
         <p>
           iREPS dashboards help managers see workorder progress, meter reading
           performance, revenue exceptions, field outcomes, and ward-level
@@ -19,7 +17,7 @@ function DashboardShowcase() {
         </p>
       </div>
 
-      <div className="dashboardShowcaseGrid">
+      <div className="dashboardShowcaseGrid reveal-stagger" ref={gridRef}>
         <div className="dashboardMetrics">
           {dashboardMetricCards.map((item) => (
             <div className="dashboardMetricCard" key={item.label}>
@@ -36,7 +34,6 @@ function DashboardShowcase() {
               <p className="chartLabel">Workorder completion</p>
               <strong>Weekly field progress</strong>
             </div>
-
             <span>Live view</span>
           </div>
 
@@ -65,19 +62,15 @@ function DashboardShowcase() {
 
           <div className="pieWrap">
             <div className="pieChart"></div>
-
             <div className="pieLegend">
               <span>
-                <i className="legendSuccess"></i>
-                Success
+                <i className="legendSuccess"></i> Success
               </span>
               <span>
-                <i className="legendWarning"></i>
-                No Access
+                <i className="legendWarning"></i> No Access
               </span>
               <span>
-                <i className="legendInfo"></i>
-                No Reading
+                <i className="legendInfo"></i> No Reading
               </span>
             </div>
           </div>
@@ -102,7 +95,6 @@ function DashboardShowcase() {
                   <th>Status</th>
                 </tr>
               </thead>
-
               <tbody>
                 {dashboardTableRows.map((row) => (
                   <tr key={row.ward}>

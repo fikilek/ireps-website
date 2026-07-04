@@ -1,12 +1,15 @@
 import { gisFeatureCards, gisLayerItems } from "../data/websiteContent";
 import SectionHeader from "./SectionHeader";
+import useScrollReveal from "../hooks/useScrollReveal";
 
 function MapGisShowcase() {
+  const featRef = useScrollReveal({ threshold: 0.05 });
+
   return (
     <section id="gis" className="section gisShowcase">
       <div className="gisContent">
         <SectionHeader
-          eyebrow="Map & GIS intelligence"
+          eyebrow="Map & GIS Intelligence"
           title="See municipal infrastructure exactly where it operates."
         >
           iREPS brings GIS capability into daily operations by connecting
@@ -14,7 +17,7 @@ function MapGisShowcase() {
           outcomes, and reporting views.
         </SectionHeader>
 
-        <div className="gisFeatureGrid">
+        <div className="gisFeatureGrid reveal-stagger" ref={featRef}>
           {gisFeatureCards.map((item) => (
             <article className="gisFeatureCard" key={item.title}>
               <h3>{item.title}</h3>
@@ -44,16 +47,13 @@ function MapGisShowcase() {
 
           <div className="mapLegend">
             <span>
-              <i className="legendMeter"></i>
-              Meter
+              <i className="legendMeter"></i> Meter
             </span>
             <span>
-              <i className="legendPremise"></i>
-              Premise
+              <i className="legendPremise"></i> Premise
             </span>
             <span>
-              <i className="legendGeofence"></i>
-              Geofence
+              <i className="legendGeofence"></i> Geofence
             </span>
           </div>
         </div>

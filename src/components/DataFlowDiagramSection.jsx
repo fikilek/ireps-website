@@ -5,7 +5,7 @@ function DataFlowDiagramSection() {
   return (
     <section id="data-flow" className="section dataFlowSection">
       <SectionHeader
-        eyebrow="iREPS data flow"
+        eyebrow="iREPS Data Flow"
         title="From meter assets and field work to cloud intelligence."
       >
         iREPS connects meter infrastructure, AMI and prepaid vending platforms,
@@ -19,8 +19,7 @@ function DataFlowDiagramSection() {
             <span className="meterIcon"></span>
             <strong>Electricity & Water Meters</strong>
             <p>
-              Conventional, prepaid, field, connected, disconnected, and removed
-              assets.
+              Conventional, prepaid, field, connected, disconnected, and removed assets.
             </p>
           </div>
 
@@ -28,8 +27,7 @@ function DataFlowDiagramSection() {
             <span className="cloudMiniIcon"></span>
             <strong>AMI / Vending Platforms</strong>
             <p>
-              External readings, token activity, vending confirmation, and
-              exceptions.
+              External readings, token activity, vending confirmation, and exceptions.
             </p>
           </div>
         </div>
@@ -64,7 +62,6 @@ function DataFlowDiagramSection() {
             <span></span>
             <span></span>
           </div>
-
           <strong>iREPS Cloud Server</strong>
           <p>
             Stores field evidence, meter records, workorders, GIS context,

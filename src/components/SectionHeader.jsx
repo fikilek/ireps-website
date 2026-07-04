@@ -1,9 +1,13 @@
+import useScrollReveal from "../hooks/useScrollReveal";
+
 function SectionHeader({ eyebrow, title, children }) {
+  const ref = useScrollReveal();
+
   return (
-    <div className="sectionIntro">
-      <p className="eyebrow">{eyebrow}</p>
+    <div className="sectionIntro reveal" ref={ref}>
+      {eyebrow && <p className="eyebrow">{eyebrow}</p>}
       <h2>{title}</h2>
-      {children ? <p>{children}</p> : null}
+      {children && <p className="sectionDesc">{children}</p>}
     </div>
   );
 }

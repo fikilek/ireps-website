@@ -1,7 +1,10 @@
 import { geofenceFeatureCards, geofenceMetrics } from "../data/websiteContent";
 import SectionHeader from "./SectionHeader";
+import useScrollReveal from "../hooks/useScrollReveal";
 
 function GeofencesShowcase() {
+  const featRef = useScrollReveal({ threshold: 0.05 });
+
   return (
     <section id="geofences" className="section geofenceShowcase">
       <div className="geofenceVisual">
@@ -25,7 +28,7 @@ function GeofencesShowcase() {
 
             <div className="geofenceLabel">
               <strong>Meter Reading Campaign A</strong>
-              <span>623 meters • 37 open workorders</span>
+              <span>623 meters &bull; 37 open workorders</span>
             </div>
           </div>
 
@@ -42,7 +45,7 @@ function GeofencesShowcase() {
 
       <div className="geofenceContent">
         <SectionHeader
-          eyebrow="Geofences & spatial campaigns"
+          eyebrow="Geofences & Spatial Campaigns"
           title="Turn maps into focused operating areas."
         >
           Geofences help municipalities and service providers group
@@ -51,7 +54,7 @@ function GeofencesShowcase() {
           structure.
         </SectionHeader>
 
-        <div className="geofenceFeatureGrid">
+        <div className="geofenceFeatureGrid reveal-stagger" ref={featRef}>
           {geofenceFeatureCards.map((item) => (
             <article className="geofenceFeatureCard" key={item.title}>
               <h3>{item.title}</h3>

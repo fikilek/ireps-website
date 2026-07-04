@@ -1,11 +1,14 @@
 import { roleFlowSteps, userRoleCards } from "../data/websiteContent";
 import SectionHeader from "./SectionHeader";
+import useScrollReveal from "../hooks/useScrollReveal";
 
 function UserRolesShowcase() {
+  const gridRef = useScrollReveal({ threshold: 0.05 });
+
   return (
     <section id="roles" className="section userRolesShowcase">
       <SectionHeader
-        eyebrow="User roles & permissions"
+        eyebrow="User Roles & Permissions"
         title="Every iREPS user operates through a defined role."
       >
         iREPS separates platform administration, municipal management,
@@ -20,11 +23,10 @@ function UserRolesShowcase() {
         ))}
       </div>
 
-      <div className="userRoleGrid">
+      <div className="userRoleGrid reveal-stagger" ref={gridRef}>
         {userRoleCards.map((item) => (
           <article className="userRoleCard" key={item.role}>
             <div className="roleBadge">{item.role}</div>
-
             <div>
               <h3>{item.name}</h3>
               <p>{item.text}</p>
